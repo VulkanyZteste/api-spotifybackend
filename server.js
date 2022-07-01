@@ -32,6 +32,12 @@ mongoose.connect(process.env.MONGODB_URI)
     });
 
 
+// Routes
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+
 // Server
 app.on('ready', () => {
     app.listen(PORT, () => {
